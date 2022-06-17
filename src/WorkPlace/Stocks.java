@@ -75,7 +75,16 @@ public class Stocks {
     }
 
     public static void GenInfo() throws IOException {
-        File f = new File("/home/akyl/IdeaProjects/untitled");
+        File f=null;
+        try {
+            File g = new File("/home/IdeaProjects/exam");
+            f=g;
+        }catch (NullPointerException c){
+            System.out.println("Здесь вышла бы ошибка. Укажите путь до папки этого проекта!");
+            b=a.nextLine();
+            File g = new File(b);
+            f = g;
+        }
         FilenameFilter filter = new FilenameFilter() {
             @Override
             public boolean accept(File f, String name) {
