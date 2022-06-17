@@ -4,7 +4,7 @@ import Fast.f;
 
 import java.io.IOException;
 
-public class Soap extends MotherOfGoods{
+public class Soap extends MotherOfGoods {
     private int weight;
 
     public Soap(String name, String type, int volume, int amount, int weight) {

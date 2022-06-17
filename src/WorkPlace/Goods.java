@@ -1,6 +1,6 @@
 package WorkPlace;
 
-public class Goods extends MotherOfGoods{
+public class Goods extends MotherOfGoods {
 
     private int ShampooVolume;
 

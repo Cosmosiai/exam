@@ -21,13 +21,14 @@ public class GoodsMenu {
                 ElseExeption.ElseExeption();
                 System.out.println();
                 menu();
-            }finally {
+            } finally {
                 checker(a);
             }
         }
     }
+
     public static void checker(int a) throws IOException {
-        switch (a){
+        switch (a) {
             case 1:
                 break;
             case 2:

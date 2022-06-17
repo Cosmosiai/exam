@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 public class Menu {
     boolean v;
-    public  static void menu() throws IOException {
+
+    public static void menu() throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Выберите действие:\n1)Работа с товарами\n2)Работа со складами\n0)Выход из программы\nВводите только цифру действия");
@@ -23,7 +24,7 @@ public class Menu {
                 System.out.println();
                 menu();
             }
-            if (checker(a)){
+            if (checker(a)) {
                 break;
             }
         }

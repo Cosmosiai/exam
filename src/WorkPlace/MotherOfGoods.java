@@ -19,6 +19,7 @@ public abstract class MotherOfGoods {
         id++;
     }
 
+
     public static int getId() {
         return id;
     }
@@ -45,7 +46,6 @@ public abstract class MotherOfGoods {
             Stocks.newStock();
         }
     }
-
 
 
 }

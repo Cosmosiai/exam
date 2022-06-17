@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class StocksMenu{
+public class StocksMenu {
     public static void menu() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите действие:\n1)Показать список складов и товаров в них\n2)Добавить новый склад\n3)Удалить склад\n0)Выход в главное меню\nВводите только цифру действия");
@@ -21,7 +21,7 @@ public class StocksMenu{
                 ElseExeption.ElseExeption();
                 System.out.println();
                 menu();
-            }finally {
+            } finally {
                 checker(a);
             }
         }
