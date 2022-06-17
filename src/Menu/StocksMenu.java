@@ -4,6 +4,7 @@ import WorkPlace.Stocks;
 import exeptions.ElseExeption;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -30,7 +31,7 @@ public class StocksMenu {
     public static void checker(int a) throws IOException {
         switch (a) {
             case 1:
-                Stocks.GenInfo();
+                System.out.println(Arrays.toString(Stocks.GenInfo()));
                 break;
             case 2:
                 Stocks.newStock();

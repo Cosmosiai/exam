@@ -1,14 +1,18 @@
 package WorkPlace;
 
+
 import Menu.StocksMenu;
 import exeptions.ElseExeption;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-import static Fast.f.a;
+import static Fast.f.*;
 
 public class Stocks {
+    static Scanner sc = new Scanner(System.in);
 
     private static int StockNum = 1;
     private final int volume = 50;
@@ -16,9 +20,22 @@ public class Stocks {
 
     public static void newStock() throws IOException {
         System.out.println("Укажите сколько вы собираетесь занять складов");
-        int count = a.nextInt();
+        int count = 0;
+        try {
+            int d = sc.nextInt();
+            if (d < 0) {
+                StocksMenu.menu();
+            }
+            count = d;
+        } catch (InputMismatchException i) {
+            ElseExeption.ElseExeption();
+            StocksMenu.menu();
+        }
+
+
         for (int i = 0; i < count; i++) {
             System.out.println("Укажите уникальное имя для вашего склада");
+
             String StockName = a.nextLine();
             if (StockName == "") {
                 StockName = a.nextLine();
@@ -52,6 +69,21 @@ public class Stocks {
     }
 
     public static void deliteStock() throws IOException {
+        GenInfo();
+        System.out.println("Хотите удалить все пустые склады? Y/N");
+        String[] as = GenInfo();
+        b = a.nextLine();
+        if (b.equals("y") || b.equals("Y")) {
+            for (String i :
+                    as) {
+                File fl=new File(i);
+                if (fl.length()==0){
+                    fl.delete();
+                }
+            }
+            System.out.println("Удаление успешно завершено\n");
+            StocksMenu.menu();
+        }
         System.out.println("\nУкажите имя удаляемого склада. Введите 0 для отмены:");
         b = a.nextLine();
         if (b.equals("0")) {
@@ -68,22 +100,23 @@ public class Stocks {
                 System.out.println("Склад несвободен. Реализуйте товар!");
                 StocksMenu.menu();
             } else {
+                fl.delete();
                 System.out.println("Удаление закончено\n");
                 StocksMenu.menu();
             }
         }
     }
 
-    public static void GenInfo() throws IOException {
-        File f=null;
+    public static String[] GenInfo() throws IOException {
+        File d = null;
         try {
-            File g = new File("/home/IdeaProjects/exam");
-            f=g;
-        }catch (NullPointerException c){
+            File g = new File("/home/akyl/IdeaProjects/exam/");
+            d = g;
+        } catch (NullPointerException c) {
             System.out.println("Здесь вышла бы ошибка. Укажите путь до папки этого проекта!");
-            b=a.nextLine();
+            b = a.nextLine();
             File g = new File(b);
-            f = g;
+            d = g;
         }
         FilenameFilter filter = new FilenameFilter() {
             @Override
@@ -91,8 +124,7 @@ public class Stocks {
                 return name.endsWith(".txt");
             }
         };
-        String[] pathnames = f.list(filter);
-        System.out.println(Arrays.toString(pathnames));
-        StocksMenu.menu();
+        String[] pathnames = d.list(filter);
+        return pathnames;
     }
 }

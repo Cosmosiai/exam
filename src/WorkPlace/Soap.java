@@ -20,4 +20,5 @@ public class Soap extends MotherOfGoods {
     public void CheckPlace() throws IOException {
         super.CheckPlace();
     }
+
 }

@@ -2,7 +2,10 @@ package WorkPlace;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+
+import static Fast.f.a;
 
 public abstract class MotherOfGoods {
     private static int id;
@@ -46,6 +49,5 @@ public abstract class MotherOfGoods {
             Stocks.newStock();
         }
     }
-
 
 }
