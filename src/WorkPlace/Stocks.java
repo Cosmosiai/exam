@@ -29,7 +29,8 @@ public class Stocks {
             count = d;
         } catch (InputMismatchException i) {
             ElseExeption.ElseExeption();
-            StocksMenu.menu();
+            sc.nextLine();
+            newStock();
         }
 
 
