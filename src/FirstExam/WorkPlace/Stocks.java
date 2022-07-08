@@ -1,15 +1,14 @@
-package WorkPlace;
+package FirstExam.WorkPlace;
 
 
-import Menu.StocksMenu;
-import exeptions.ElseExeption;
+import FirstExam.Menu.StocksMenu;
+import FirstExam.exeptions.ElseExeption;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static Fast.f.*;
+import static FirstExam.Fast.f.*;
 
 public class Stocks {
     static Scanner sc = new Scanner(System.in);

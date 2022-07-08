@@ -1,8 +1,5 @@
-package Fast;
+package FirstExam.Fast;
 
-import exeptions.ElseExeption;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class f {
@@ -12,4 +9,7 @@ public class f {
         return a.nextInt();
     }
 
+    public static String getText (){
+        return a.nextLine();
+    }
 }

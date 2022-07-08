@@ -1,6 +1,6 @@
-package Menu;
+package FirstExam.Menu;
 
-import exeptions.ElseExeption;
+import FirstExam.exeptions.ElseExeption;
 
 import java.io.IOException;
 import java.util.InputMismatchException;

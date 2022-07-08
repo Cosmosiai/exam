@@ -1,6 +1,4 @@
-package WorkPlace;
-
-import Fast.f;
+package FirstExam.WorkPlace;
 
 import java.io.IOException;
 

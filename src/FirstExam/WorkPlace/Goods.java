@@ -1,9 +1,9 @@
-package WorkPlace;
+package FirstExam.WorkPlace;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static Fast.f.a;
+import static FirstExam.Fast.f.a;
 
 public class Goods extends MotherOfGoods {
 

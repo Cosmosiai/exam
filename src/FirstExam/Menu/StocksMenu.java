@@ -1,7 +1,7 @@
-package Menu;
+package FirstExam.Menu;
 
-import WorkPlace.Stocks;
-import exeptions.ElseExeption;
+import FirstExam.WorkPlace.Stocks;
+import FirstExam.exeptions.ElseExeption;
 
 import java.io.IOException;
 import java.util.Arrays;

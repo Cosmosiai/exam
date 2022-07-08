@@ -1,9 +1,8 @@
-import Menu.Menu;
-import exeptions.ElseExeption;
+package FirstExam;
+
+import FirstExam.Menu.Menu;
 
 import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Main {
 
